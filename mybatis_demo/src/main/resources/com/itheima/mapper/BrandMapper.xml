@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace:名称空间
+-->
+<mapper namespace="com.itheima.mapper.BrandMapper">
+    <!--
+        id:唯一映射
+        type:映射的类型，支持别名
+    -->
+    <resultMap id="brandResultMap" type="brand">
+        <!--
+            id:完成主键字段的映射
+            result:完成一般字段的映射
+            column:表的列名
+            property:实体类的属性名
+        -->
+        <result column="brand_name" property="brandName"/>
+        <result column="company_name" property="companyName"/>
+    </resultMap>
+
+    <select id="selectById" resultMap="brandResultMap">
+        select * from tb_brand where id =  #{id};
+    </select>
+    <!--
+        动态条件查询:
+            *if :条件判断
+                *test:逻辑表达式
+    -->
+    <select id="selectByCondition" resultMap = "brandResultMap">
+        select *
+        from tb_brand
+        <where>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="companyName != null and companyName != ''">
+                and company_name like #{companyName}
+            </if>
+            <if test="brandName != null and brandName != ''">
+                and brand_name like #{brandName};
+            </if>
+        </where>
+    </select>
+
+    <select id="selectByConditionSingle" resultMap="brandResultMap">
+        select *
+        from tb_brand
+        <where>
+            <choose>
+                <when test="status != null">
+                    status = #{status}
+                </when>
+                <when test="companyName != null and companyName != ''">
+                    company_name like #{companyName}
+                </when>
+                <when test="brandName != null and brandName != ''">
+                    brand_name like #{brandName};
+                </when>
+            </choose>
+        </where>
+    </select>
+    <select id="selectAll" resultMap = "brandResultMap">
+        select *
+        from tb_brand;
+    </select>
+
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        insert into tb_brand(brand_name, company_name, ordered, description, status)
+        values (#{brandName},#{companyName},#{ordered},#{description},#{status});
+    </insert>
+
+    <update id="update">
+        update tb_brand
+        <set>
+            <if test="brandName != null and brandName != ''">
+                brand_name = #{brandName},
+            </if>
+            <if test="companyName != null and companyName != ''">
+                company_name = #{companyName},
+            </if>
+            <if test="ordered != null">
+                ordered = #{ordered},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="status != null">
+                status = #{status}
+            </if>
+        </set>
+        where id = #{id};
+    </update>
+
+    <delete id="deleteById">
+        delete from tb_brand where id = #{id};
+    </delete>
+    <delete id="deleteByIds">
+        delete from tb_brand where id
+        in  <foreach collection="ids" item="id" separator="," open="(" close=");">
+            #{id}
+            </foreach>
+    </delete>
+</mapper>
