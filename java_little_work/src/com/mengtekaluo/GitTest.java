@@ -12,7 +12,5 @@ public class GitTest {
         System.out.println("Hello Git4!");
         System.out.println("Hello Gitlab!");
         System.out.println("Hello Gitlab jiafei");
-
-
     }
 }
