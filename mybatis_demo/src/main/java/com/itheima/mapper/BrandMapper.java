@@ -13,6 +13,7 @@ import java.util.Map;
  * @description
  */
 public interface BrandMapper {
+
     /***
     * @author: liweiliang
     * @date: 2023/1/3 21:13
@@ -21,6 +22,7 @@ public interface BrandMapper {
     * @details: 查询所有
     **/
     List<Brand> selectAll();
+
     /***
     * @author: liweiliang
     * @date: 2023/1/3 21:46
@@ -29,14 +31,16 @@ public interface BrandMapper {
     * @details: 查询详情
     **/
     Brand selectById(int id);
-//    /***
-//    * @author: liweiliang
-//    * @date: 2023/1/3 21:48
-//    * @param: [status, companyName, brandName]
-//    * @return: java.util.List<com.itheima.pojo.Brand>
-//    * @details: 多条件查询(散装参数)
-//    **/
-//    List<Brand> selectByCondition(@Param("status")int status,@Param("companyName")String companyName,@Param("brandName")String brandName);
+
+    /***
+    * @author: liweiliang
+    * @date: 2023/1/3 21:48
+    * @param: [status, companyName, brandName]
+    * @return: java.util.List<com.itheima.pojo.Brand>
+    * @details: 多条件查询(散装参数)
+    **/
+    List<Brand> selectByCondition(@Param("status")int status,@Param("companyName")String companyName,@Param("brandName")String brandName);
+
 //    /***
 //    * @author: liweiliang
 //    * @date: 2023/1/3 22:00
@@ -45,14 +49,15 @@ public interface BrandMapper {
 //    * @details: 多条件查询(对象参数)
 //    **/
 //    List<Brand> selectByCondition(Brand brand);
-    /***
-    * @author: liweiliang
-    * @date: 2023/1/4 9:45
-    * @param: [map]
-    * @return: java.util.List<com.itheima.pojo.Brand>
-    * @details: 多条件查询(map参数)
-    **/
-    List<Brand> selectByCondition(Map map);
+
+//    /***
+//    * @author: liweiliang
+//    * @date: 2023/1/4 9:45
+//    * @param: [map]
+//    * @return: java.util.List<com.itheima.pojo.Brand>
+//    * @details: 多条件查询(map参数)
+//    **/
+//    List<Brand> selectByCondition(Map map);
 
     /***
     * @author: liweiliang

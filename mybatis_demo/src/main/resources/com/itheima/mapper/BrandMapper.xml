@@ -34,7 +34,7 @@
         from tb_brand
         <where>
             <if test="status != null">
-                and status = #{status}
+               status = #{status}
             </if>
             <if test="companyName != null and companyName != ''">
                 and company_name like #{companyName}
@@ -62,6 +62,7 @@
             </choose>
         </where>
     </select>
+
     <select id="selectAll" resultMap = "brandResultMap">
         select *
         from tb_brand;
@@ -91,16 +92,19 @@
                 status = #{status}
             </if>
         </set>
-        where id = #{id};
+        where
+            id = #{id};
     </update>
 
     <delete id="deleteById">
         delete from tb_brand where id = #{id};
     </delete>
+
     <delete id="deleteByIds">
         delete from tb_brand where id
         in  <foreach collection="ids" item="id" separator="," open="(" close=");">
             #{id}
             </foreach>
     </delete>
+
 </mapper>

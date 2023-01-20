@@ -11,20 +11,18 @@ import java.sql.*;
  */
 public class JDBCDemo {
     public static void main(String[] args) throws Exception {
-        String url = "jdbc:mysql:///atguigudb?useSSL=false";
+        String url = "jdbc:mysql:///test?useSSL=false";
         String username = "root";
         String password = "liang521..";
         Connection connection = DriverManager.getConnection(url, username, password);
-        String sql = "select * from emp";
+        String sql = "select * from product";
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);
         while (resultSet.next()) {
             int id = resultSet.getInt(1);
-            String ename = resultSet.getString(2);
-            String joindate = resultSet.getString(3);
-            double salary = resultSet.getDouble(4);
-            double bonus = resultSet.getDouble(5);
-            System.out.println(id + " " + ename + " " + joindate + " " + salary + " " + bonus);
+            String name = resultSet.getString(2);
+            String price = resultSet.getString(3);
+            System.out.println(id + " " + name + " " + price );
         }
         resultSet.close();
         statement.close();

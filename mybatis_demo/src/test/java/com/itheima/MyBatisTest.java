@@ -35,6 +35,7 @@ public class MyBatisTest {
         //4.释放资源
         sqlSession.close();
     }
+
     @Test
     public void testSelectById() throws IOException {
         //接收参数id
@@ -52,6 +53,7 @@ public class MyBatisTest {
         //4.释放资源
         sqlSession.close();
     }
+
     @Test
     public void testSelectByCondition() throws IOException {
         //获取信息
@@ -67,9 +69,9 @@ public class MyBatisTest {
 //        brand.setCompanyName(companyName);
 //        brand.setStatus(status);
         //map集合
-        HashMap map = new HashMap();
+//        HashMap map = new HashMap();
 //        map.put("status",status);
-        map.put("companyName",companyName);
+//        map.put("companyName",companyName);
 //        map.put("brandName",brandName);
         //1.获取SqlSessionFactory对象
         String resource = "mybatis-config.xml";
@@ -79,12 +81,13 @@ public class MyBatisTest {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //3.获取BrandMapper接口对象
         BrandMapper brandMapper = sqlSession.getMapper(BrandMapper.class);
-//        List<Brand> brands = brandMapper.selectByCondition(status, companyName, brandName);
-        List<Brand> brands = brandMapper.selectByCondition(map);
+        List<Brand> brands = brandMapper.selectByCondition(status, companyName, brandName);
+//        List<Brand> brands = brandMapper.selectByCondition(map);
         System.out.println(brands);
         //4.释放资源
         sqlSession.close();
     }
+
     @Test
     public void testSelectByConditionSingle() throws IOException {
         //获取信息
@@ -118,6 +121,7 @@ public class MyBatisTest {
         //4.释放资源
         sqlSession.close();
     }
+
     @Test
     public void testAdd() throws IOException {
         //接收参数
@@ -136,7 +140,7 @@ public class MyBatisTest {
         String resource = "mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        SqlSession sqlSession = sqlSessionFactory.openSession(true);    //设置为true，自动提交事务
+        SqlSession sqlSession = sqlSessionFactory.openSession();    //设置为true，自动提交事务
         BrandMapper brandMapper = sqlSession.getMapper(BrandMapper.class);
         brandMapper.add(brand);
         Integer id = brand.getId();
@@ -145,10 +149,11 @@ public class MyBatisTest {
         brands.forEach(System.out::println);
         sqlSession.close();
     }
+
     @Test
     public void testUpdate() throws IOException {
         //接收参数
-        int status = 0;
+        int status = 1;
         String companyName = "波导手机";
         String brandName = "波导";
         String description = "波导手机,手机中的战斗机";
@@ -173,6 +178,7 @@ public class MyBatisTest {
         brands.forEach(System.out::println);
         sqlSession.close();
     }
+
     @Test
     public void testDelete() throws IOException {
         int[] ids = {5,6,7,8};
