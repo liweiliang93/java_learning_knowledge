@@ -21,9 +21,10 @@
         <result column="company_name" property="companyName"/>
     </resultMap>
 
-    <select id="selectById" resultMap="brandResultMap">
-        select * from tb_brand where id =  #{id};
-    </select>
+<!--    <select id="selectById" resultMap="brandResultMap">-->
+<!--        select * from tb_brand where id =  #{id};-->
+<!--    </select>-->
+
     <!--
         动态条件查询:
             *if :条件判断
