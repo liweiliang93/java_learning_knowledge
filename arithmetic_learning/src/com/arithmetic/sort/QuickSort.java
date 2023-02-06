@@ -9,18 +9,9 @@ import java.util.Arrays;
  */
 public class QuickSort {
     public static void main(String[] args) {
-        int[] arr = new int[]{4, 2, 3, 1, 14, 13, 12, 3, 4, 5, 5, 6, 6, 7};
-        long start = System.currentTimeMillis();
-        quickSort(arr, 0, 6);
-        long end = System.currentTimeMillis();
+        int[] arr = new int[] {4, 2, 3, 1, 14, 13, 12, 3, 4, 5, 5, 6, 6, 7};
+        quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
-        System.out.println("执行时间为:" + (end - start));
-        int[] arr1 = new int[]{3, 7, 5, 6, 4, 12, 24, 5, 13, 4};
-        long start1 = System.currentTimeMillis();
-        Arrays.sort(arr);
-        long end1 = System.currentTimeMillis();
-        System.out.println("执行时间为:" + (end1 - start1));
-        System.out.println(Arrays.toString(arr1));
     }
 
     /***
@@ -31,7 +22,8 @@ public class QuickSort {
      * @details: 快速排序
      **/
     public static void quickSort(int[] array, int start, int end) {
-        if (start > end) return;
+        if (start > end)
+            return;
         int i = start;
         int j = end;
         int temp = array[start];
