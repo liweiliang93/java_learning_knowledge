@@ -3,6 +3,10 @@ package com.atguigu.multithreadcommunication;
  * @author liweiliang
  * @create 2022-10-05 18:32
  * @description
+ *      产品作为静态常量,可供生产者、消费者共同操作
+ *      Clerk类作为员工类,通过他进行产品的生产和消费,包含两个方法
+ *      Producer类:生产产品,继承Thread类,重写run方法
+ *      Consumer类:消费产品,继承Thread类,重写run方法
  */
 public class communicationTest{
     public static void main(String[] args) {
@@ -17,7 +21,7 @@ public class communicationTest{
 }
 
 class Clerk{
-    private int productNumber = 0;
+    private static int productNumber = 0;
     public Clerk(){};
     public synchronized void productProduce(){
         if(productNumber < 20){
@@ -48,7 +52,7 @@ class Clerk{
 }
 
 class Producer extends Thread{
-    private Clerk clerk;
+    private final Clerk clerk;
     public Producer(Clerk clerk){
         this.clerk = clerk;
     }
@@ -67,7 +71,7 @@ class Producer extends Thread{
 }
 
 class Consumer extends Thread{
-    private Clerk clerk;
+    private final Clerk clerk;
     public Consumer(Clerk clerk){
         this.clerk = clerk;
     }

@@ -79,6 +79,7 @@ public class CollectionTest {
     }
 }
 
+@SuppressWarnings("ALL")
 class Person{
     private String name;
     private int age;

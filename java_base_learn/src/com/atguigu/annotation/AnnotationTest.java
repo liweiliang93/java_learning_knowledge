@@ -1,6 +1,6 @@
 package com.atguigu.annotation;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
@@ -36,8 +36,8 @@ public class AnnotationTest {
     public void testGetAnnotation(){
         Class clazz = Student.class;
         Annotation[] annotations = clazz.getAnnotations();
-        for(int i = 0; i < annotations.length; i++){
-            System.out.println(annotations[i]);
+        for (Annotation annotation : annotations) {
+            System.out.println(annotation);
         }
     }
 }
