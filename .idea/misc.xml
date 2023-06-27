@@ -3,6 +3,11 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/maven_learn_demo" />
+    <file type="web" url="file://$PROJECT_DIR$/../maven-learning-project/maven-demo01" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -10,10 +15,19 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/mybatis_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../maven-learning-project/maven-demo01/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/mybatis_demo/basic_course/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis_demo/maven_learn_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis_demo/maven_learning_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis_demo/untitled/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

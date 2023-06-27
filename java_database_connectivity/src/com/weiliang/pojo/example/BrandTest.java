@@ -1,4 +1,4 @@
-package com.weiliang.example;
+package com.weiliang.pojo.example;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import com.weiliang.pojo.Brand;
