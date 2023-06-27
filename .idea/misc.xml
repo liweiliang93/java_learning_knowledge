@@ -5,8 +5,11 @@
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/maven-demo01" />
     <file type="web" url="file://$PROJECT_DIR$/maven_learn_demo" />
     <file type="web" url="file://$PROJECT_DIR$/../maven-learning-project/maven-demo01" />
+    <file type="web" url="file://$PROJECT_DIR$/../maven-learning-project/maven-demo02" />
+    <file type="web" url="file://$PROJECT_DIR$/../maven-learning-project/maven-example" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -15,6 +18,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/mybatis_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/maven_learn_demo/maven-demo01/pom.xml" />
+        <option value="$PROJECT_DIR$/maven_learn_demo/maven-demo02/pom.xml" />
+        <option value="$PROJECT_DIR$/maven_learn_demo/maven-example/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
