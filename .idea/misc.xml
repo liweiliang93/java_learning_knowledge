@@ -15,7 +15,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/mybatis_demo/pom.xml" />
-        <option value="$PROJECT_DIR$/../maven-learning-project/maven-demo01/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
