@@ -11,13 +11,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="maven-demo02 (1)" />
-        <module name="maven-demo01 (1)" />
+        <module name="maven-demo02" />
         <module name="maven-demo01" />
+        <module name="maven-demo01 (1) (com.itweiliang01)" />
+        <module name="maven-demo01 (2) (com.itweiliang)" />
+        <module name="maven-demo01 (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="basic_course" target="1.8" />
-      <module name="maven-demo02" target="1.5" />
       <module name="maven_learn_demo" target="1.7" />
       <module name="maven_learning_demo" target="1.8" />
       <module name="untitled" target="1.8" />
