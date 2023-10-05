@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 /**
  * @author liweiliang
  * @create 2023-10-02 13:22:50
- * @description
+ * @description BaseServlet实现从类或者接口获取方法
  */
 public class BaseServlet extends HttpServlet {
 

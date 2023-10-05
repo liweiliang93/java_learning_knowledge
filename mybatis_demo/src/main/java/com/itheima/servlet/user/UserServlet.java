@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * @author liweiliang
  * @create 2023-10-02 13:31:28
- * @description user操作的所有接口
+ * @description user操作的所有接口都在这里
  */
 @WebServlet("/user/*")
 public class UserServlet extends BaseServlet {

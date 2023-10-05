@@ -8,6 +8,8 @@
     <file type="web" url="file://$PROJECT_DIR$/maven-demo01" />
     <file type="web" url="file://$PROJECT_DIR$/maven_learn_demo" />
     <file type="web" url="file://$PROJECT_DIR$/mybatis_demo" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_demo" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvcTest_demo" />
     <file type="web" url="file://$PROJECT_DIR$/../maven-learning-project/maven-demo01" />
     <file type="web" url="file://$PROJECT_DIR$/../maven-learning-project/maven-demo02" />
     <file type="web" url="file://$PROJECT_DIR$/../maven-learning-project/maven-example" />
@@ -20,7 +22,10 @@
       <list>
         <option value="$PROJECT_DIR$/mybatis_demo/pom.xml" />
         <option value="$PROJECT_DIR$/mybatisplus_demo/pom.xml" />
-        <option value="$PROJECT_DIR$/mybatisplus_generator/pom.xml" />
+        <option value="$PROJECT_DIR$/maven_learn_demo/maven-demo01/pom.xml" />
+        <option value="$PROJECT_DIR$/maven_learn_demo/maven-demo02/pom.xml" />
+        <option value="$PROJECT_DIR$/maven_learn_demo/maven-example/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_demo/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
