@@ -50,6 +50,7 @@
 
   <build>
     <resources>
+
       <resource>
         <directory>${project.basedir}/src/main/resources</directory>
         <filtering>true</filtering>
@@ -69,6 +70,28 @@
 
   </build>
 
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <jdbc.url>jdbc:mysql://127.0.0.1/springmvc?useSSL=false</jdbc.url>
+      </properties>
+    </profile>
+    <profile>
+      <id>test</id>
+      <properties>
+        <jdbc.url>jdbc:mysql://127.2.2.2/springmvc?useSSL=false</jdbc.url>
+      </properties>
+    </profile>
+    <profile>
+      <id>prod</id>
+      <properties>
+        <jdbc.url>jdbc:mysql://127.3.3.3/springmvc?useSSL=false</jdbc.url>
+      </properties>
+    </profile>
+  </profiles>
+
+  <!--私服资源上传和下载-->
   <distributionManagement>
     <repository>
       <id>itweiliang-release</id>

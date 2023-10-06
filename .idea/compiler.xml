@@ -38,6 +38,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="mybatisplus_demo" options="-parameters" />
       <module name="mybatisplus_generator" options="-parameters" />
+      <module name="springboot_demo" options="-parameters" />
     </option>
   </component>
 </project>

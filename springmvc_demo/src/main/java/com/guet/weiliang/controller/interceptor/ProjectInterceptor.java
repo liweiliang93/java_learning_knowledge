@@ -1,5 +1,6 @@
 package com.guet.weiliang.controller.interceptor;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * @create 2023-10-04 17:08:31
  * @description 配置自定义拦截器
  */
+@Component
 public class ProjectInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
