@@ -15,6 +15,7 @@
         <module name="maven-demo02" />
         <module name="maven-demo01" />
         <module name="maven-demo01 (1)" />
+        <module name="springboot_demo" />
         <module name="maven-demo02 (1)" />
         <module name="maven-demo01 (1) (com.itweiliang)" />
         <module name="springmvc_demo" />
