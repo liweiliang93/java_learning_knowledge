@@ -15,7 +15,6 @@
         <module name="maven-demo02" />
         <module name="maven-demo01" />
         <module name="maven-demo01 (1)" />
-        <module name="springboot_demo" />
         <module name="maven-demo02 (1)" />
         <module name="maven-demo01 (1) (com.itweiliang)" />
         <module name="springmvc_demo" />
@@ -29,6 +28,7 @@
       <module name="maven_learn_demo" target="1.7" />
       <module name="maven_learning_demo" target="1.8" />
       <module name="mybatisplus_generator" target="1.8" />
+      <module name="springboot_demo" target="1.8" />
       <module name="springmvc_demo1" target="1.8" />
       <module name="springmvcTest_demo" target="1.8" />
       <module name="untitled" target="1.8" />
